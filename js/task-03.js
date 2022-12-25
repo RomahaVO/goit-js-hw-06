@@ -18,6 +18,7 @@ const galleryCollection = document.querySelector('.gallery');
 const createGallery = images
 .map((img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`)
 .join("");
+
 galleryCollection.classList.add('imgStyle');
 
 
