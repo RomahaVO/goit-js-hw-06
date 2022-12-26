@@ -26,9 +26,9 @@ function createBoxes(amount) {
     background: ${getRandomHexColor()}"><div>`;
     sizeCouter += 10;
 
-    markup.push(...element);
+    markup.push(element);
   }
-  return markup.join("");
+  return markup;
 }
 
 
