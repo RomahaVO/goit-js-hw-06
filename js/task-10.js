@@ -12,37 +12,36 @@ const boxes = document.getElementById("boxes");
 function onClick() {
   const amount = input.valueAsNumber;
   if (!amount) return;
-  const markup = createBoxes(amount);
-  // updatePages(markup.join(" "));
+  const markup = createBoxes(amount).join(" ");
   updatePages(markup);
-
+  console.dir(markup)
+console.log(markup)
 }
 
 
 
 function createBoxes(amount) {
   const markup = [];
-  const sizeCouter = 30 ;
-
   for (let i = 0; i < amount; i ++) {
-    const size = sizeCouter+i*10;
-    const element = `<div class="item" style="width: ${size}px;
-    height: ${size}px;
+    let element = `<div style="width: ${30+i*10}px;
+    height: ${30+i*10}px;
     background: ${getRandomHexColor()}"><div>`;
 
     markup.push(element);
   }
   return markup;
+};
 
-}
+
 
 
 function updatePages(markup = "") {
   // boxes.innerHTML = flatMap(markup);
-  // boxes.appendChild(markup);
-  // boxes.insertAdjacentElement('afterend',[markup]);
-  // boxes.insertAdjacentHTML('afterend',markup);
-  boxes.innerHTML = [...markup];
+  // boxes.append(markup);
+  // boxes.insertAdjacentElement("afterend",markup);
+    // boxes.insertAdjacentHTML("beforeEnd",markup);
+    boxes.innerHTML = markup;
+  // boxes.insertAdjacentHTML("beforeend", markup);
 }
 
 
