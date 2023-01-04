@@ -25,7 +25,7 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i ++) {
     let element = `<div style="width: ${30+i*10}px;
     height: ${30+i*10}px;
-    background: ${getRandomHexColor()}"><div>`;
+    background: ${getRandomHexColor()}"></div>`;
 
     markup.push(element);
   }
