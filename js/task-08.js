@@ -19,7 +19,7 @@ function handleSubmit (event) {
         alert("Всі поля повинні бути заповнені!");
     };
     console.log(`Email: ${email.value}, Password:${password.value}`);
-    event.currentTarget;
+    event.currentTarget.reset();
     // event.currentTarget.reset();
 };
 
